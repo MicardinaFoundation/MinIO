@@ -13,3 +13,50 @@
 ## 🏗️ Архитектура решения
 
 Взаимодействие между компонентами системы построено по классической схеме работы с объектными хранилищами:
+[ HTTP Client / Swagger ]
+│ (multipart/form-data / GET)
+▼
+[ ASP.NET Core Web API ]
+│ (Minio SDK / S3 API)
+▼
+[ MinIO Server ] ──────► [ Persistent Volume (Docker) ]
+│
+▼
+[ Bucket / Objects ]
+
+---
+
+## 🚀 Функционал
+
+- [x] Развертывание MinIO в Docker с постоянным хранением данных (`volumes`).
+- [x] Интеграция ASP.NET Core с MinIO через официальный S3 SDK.
+- [x] Эндпоинт для загрузки файлов через `multipart/form-data`.
+- [x] Эндпоинт для скачивания файлов по имени объекта.
+- [x] **Дополнительное задание (+15 баллов):** - [x] Эндпоинт для получения списка всех файлов в бакете.
+  - [x] Генерация временных безопасных ссылок (**Presigned URLs**) для скачивания.
+
+---
+
+## 🛠️ Технологический стек
+
+* **Backend:** ASP.NET Core Web API (.NET 8)
+* **S3 Client:** `Minio` NuGet Package
+* **Infrastructure:** Docker / Docker Compose
+* **API Documentation:** Swagger UI
+
+---
+
+## 📦 Быстрый запуск
+
+### 1. Запуск инфраструктуры (MinIO)
+```bash
+docker-compose up -d
+
+---
+
+## 📑 Описание API Эндпоинтов
+
+| Метод | Эндпоинт | Описание | Формат данных |
+| ----- | -------- | -------- | ------------- |
+|POST | /api/files/upload | Загрузка файла в бакет | MinIOmultipart/form-data |
+GET/api/files/download/{fileName}Скачивание файла напрямую через APIFileStreamResultGET/api/files/listПолучение списка всех объектов в бакетеapplication/jsonGET/api/files/presigned-url/{fileName}Генерация временной ссылки на файлtext/plain (URL)
