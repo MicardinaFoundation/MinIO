@@ -54,3 +54,11 @@
 | GET | /api/files/download/{fileName} | Скачивание файла напрямую через API | FileStreamResult |
 | GET | /api/files/list | Получение списка всех объектов в бакете | application/json |
 | GET | /api/files/presigned-url/{fileName} | Генерация временной ссылки на файл | text/plain (URL) |
+
+### 1. Swagger UI (Тестирование API)
+Здесь представлены все доступные endpoint'ы нашего контроллера.
+
+
+
+
+
