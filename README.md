@@ -55,6 +55,8 @@
 | GET | /api/files/list | Получение списка всех объектов в бакете | application/json |
 | GET | /api/files/presigned-url/{fileName} | Генерация временной ссылки на файл | text/plain (URL) |
 
+## 🖼️ Результат
+
 ### 1. Swagger UI
 Здесь представлены все доступные endpoints контроллера.
 
