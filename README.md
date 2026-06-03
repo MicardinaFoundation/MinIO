@@ -55,10 +55,18 @@
 | GET | /api/files/list | Получение списка всех объектов в бакете | application/json |
 | GET | /api/files/presigned-url/{fileName} | Генерация временной ссылки на файл | text/plain (URL) |
 
-### 1. Swagger UI (Тестирование API)
-Здесь представлены все доступные endpoint'ы нашего контроллера.
+### 1. Swagger UI
+Здесь представлены все доступные endpoints контроллера.
+
+<img width="1465" height="877" alt="Swagger" src="https://github.com/MicardinaFoundation/MinIO/blob/main/Image/1.png"/>
 
 
+### 2. MinIO
+Видно, что загруженные через API файлы успешно сохранены в бакете `files` внутри хранилища MinIO.
 
+<img width="1465" height="877" alt="Swagger" src="https://github.com/MicardinaFoundation/MinIO/blob/main/Image/2.png"/>
 
+### 3. Результат (Генерация Presigned URL)
+Успешный ответ API при генерации временной ссылки на файл. И результат. 
 
+<img width="1465" height="877" alt="Swagger" src="https://github.com/MicardinaFoundation/MinIO/blob/main/Image/3.png"/>
