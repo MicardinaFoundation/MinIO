@@ -57,6 +57,8 @@ docker-compose up -d
 ## 📑 Описание API Эндпоинтов
 
 | Метод | Эндпоинт | Описание | Формат данных |
-| ----- | -------- | -------- | ------------- |
-|POST | /api/files/upload | Загрузка файла в бакет | MinIOmultipart/form-data |
-GET/api/files/download/{fileName}Скачивание файла напрямую через APIFileStreamResultGET/api/files/listПолучение списка всех объектов в бакетеapplication/jsonGET/api/files/presigned-url/{fileName}Генерация временной ссылки на файлtext/plain (URL)
+| --- | --- | --- | --- |
+| POST | /api/files/upload | Загрузка файла в бакет | MinIOmultipart/form-data |
+| GET | /api/files/download/{fileName} | Скачивание файла напрямую через API | FileStreamResult |
+| GET | /api/files/list | Получение списка всех объектов в бакете | application/json |
+| GET | /api/files/presigned-url/{fileName} | Генерация временной ссылки на файл | text/plain (URL) |
