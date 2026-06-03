@@ -70,3 +70,4 @@
 Успешный ответ API при генерации временной ссылки на файл. И результат. 
 
 <img width="1465" height="877" alt="Swagger" src="https://github.com/MicardinaFoundation/MinIO/blob/main/Image/3.png"/>
+<img width="1465" height="877" alt="Swagger" src="https://github.com/MicardinaFoundation/MinIO/blob/main/Image/4.png"/>
